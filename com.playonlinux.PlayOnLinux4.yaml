@@ -45,9 +45,9 @@ modules:
         url: http://sourceforge.net/projects/netcat/files/netcat/0.7.1/netcat-0.7.1.tar.gz
         sha256: 30719c9a4ffbcf15676b8f528233ccc54ee6cba96cb4590975f5fd60c68a066f
         x-checker-data:
-            type: anitya
-            project-id: 21535
-            url-template: http://sourceforge.net/projects/netcat/files/netcat/$version/netcat-$version.tar.gz
+          type: anitya
+          project-id: 21535
+          url-template: http://sourceforge.net/projects/netcat/files/netcat/$version/netcat-$version.tar.gz
     cleanup:
       - /man
       - /info
@@ -56,12 +56,12 @@ modules:
     buildsystem: autotools
     sources:
       - type: archive
-        url: https://imagemagick.org/archive/releases/ImageMagick-7.1.1-14.tar.gz
-        sha256: 2f52b6c9e4e0dfd8789e409b110dba2e806956ca96fb1b3c367887ff40ffb2d8
+        url: https://imagemagick.org/archive/releases/ImageMagick-7.1.1-15.tar.gz
+        sha256: b20348195d5c82ec35e0edb05488c456fc5efc1da585abf6511a62caa787f52a
         x-checker-data:
-            type: anitya
-            project-id: 1372
-            url-template: https://imagemagick.org/archive/releases/ImageMagick-$version.tar.gz
+          type: anitya
+          project-id: 1372
+          url-template: https://imagemagick.org/archive/releases/ImageMagick-$version.tar.gz
 
   - name: icoutils
     buildsystem: autotools
@@ -70,9 +70,9 @@ modules:
         url: http://download.savannah.gnu.org/releases/icoutils/icoutils-0.32.3.tar.bz2
         sha256: 17abe02d043a253b68b47e3af69c9fc755b895db68fdc8811786125df564c6e0
         x-checker-data:
-            type: anitya
-            project-id: 1360
-            url-template: http://download.savannah.gnu.org/releases/icoutils/icoutils-$version.tar.bz2
+          type: anitya
+          project-id: 1360
+          url-template: http://download.savannah.gnu.org/releases/icoutils/icoutils-$version.tar.bz2
 
   - name: oniguruma
     buildsystem: autotools
@@ -82,10 +82,10 @@ modules:
         url: https://api.github.com/repos/kkos/oniguruma/tarball/v6.9.8
         sha256: 1890b8c3150b65a6d761a72e3212a98d6b9c119a469c1c93099234bd3d6c5a0e
         x-checker-data:
-            type: json
-            url: https://api.github.com/repos/kkos/oniguruma/releases/latest
-            version-query: .tag_name
-            url-query: .tarball_url
+          type: json
+          url: https://api.github.com/repos/kkos/oniguruma/releases/latest
+          version-query: .tag_name
+          url-query: .tarball_url
 
   - name: jq
     buildsystem: autotools
@@ -95,10 +95,10 @@ modules:
         url: https://api.github.com/repos/jqlang/jq/tarball/jq-1.6
         sha256: 30eaa22720cd899fd6b9b791bb079b0ae2745f9e3db59fd6730c807300c98156
         x-checker-data:
-            type: json
-            url: https://api.github.com/repos/jqlang/jq/releases/latest
-            version-query: .tag_name
-            url-query: .tarball_url
+          type: json
+          url: https://api.github.com/repos/jqlang/jq/releases/latest
+          version-query: .tag_name
+          url-query: .tarball_url
       - type: script
         dest-filename: autogen.sh
         commands:
@@ -131,10 +131,10 @@ modules:
         url: https://api.github.com/repos/PlayOnLinux/POL-POM-4/tarball/4.4
         sha256: dd76c9cf6b548edbaf311996b588bd4c9eec256308f66486dbec59303ef9d0ed
         x-checker-data:
-            type: json
-            url: https://api.github.com/repos/PlayOnLinux/POL-POM-4/releases/latest
-            version-query: .tag_name
-            url-query: .tarball_url
+          type: json
+          url: https://api.github.com/repos/PlayOnLinux/POL-POM-4/releases/latest
+          version-query: .tag_name
+          url-query: .tarball_url
       - type: patch
         path: patches/xdg-dir.patch
       - type: patch
