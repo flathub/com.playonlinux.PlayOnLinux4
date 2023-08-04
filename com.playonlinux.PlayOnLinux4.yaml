@@ -153,6 +153,8 @@ modules:
       - type: patch
         path: patches/working-locales.patch
       - type: patch
+        path: patches/no-vdrive-link.patch
+      - type: patch
         path: patches/debian-package.patch
       - type: patch
         path: patches/appdata.patch
