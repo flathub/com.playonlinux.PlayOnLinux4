@@ -1,6 +1,6 @@
 diff -ruN a/bash/startup b/bash/startup
---- a/bash/startup      2020-05-17 16:05:33.000000000 +0200
-+++ b/bash/startup      2023-08-04 15:47:42.237190548 +0200
+--- a/bash/startup	2020-05-17 16:05:33.000000000 +0200
++++ b/bash/startup	2023-08-04 17:33:43.750821282 +0200
 @@ -33,12 +33,12 @@
  
  ### Operations below are background asynchronous tasks
@@ -10,12 +10,12 @@ diff -ruN a/bash/startup b/bash/startup
  # Run XQuartz
  
 -if [ "$(POL_Config_Read VDRIVES_LINK_MADE)" = "" ]; then
--       POL_Config_Write VDRIVES_LINK_MADE TRUE
--       [ -e "$HOME/$APPLICATION_TITLE's virtual drives" ] || ln -s "$POL_USER_ROOT/wineprefix/" "$HOME/$APPLICATION_TITLE's virtual drives"
+-	POL_Config_Write VDRIVES_LINK_MADE TRUE
+-	[ -e "$HOME/$APPLICATION_TITLE's virtual drives" ] || ln -s "$POL_USER_ROOT/wineprefix/" "$HOME/$APPLICATION_TITLE's virtual drives"
 -fi
 +#if [ "$(POL_Config_Read VDRIVES_LINK_MADE)" = "" ]; then
-+#      POL_Config_Write VDRIVES_LINK_MADE TRUE
-+#      [ -e "$HOME/$APPLICATION_TITLE's virtual drives" ] || ln -s "$POL_USER_ROOT/wineprefix/" "$HOME/$APPLICATION_TITLE's virtual drives"
++#	POL_Config_Write VDRIVES_LINK_MADE TRUE
++#	[ -e "$HOME/$APPLICATION_TITLE's virtual drives" ] || ln -s "$POL_USER_ROOT/wineprefix/" "$HOME/$APPLICATION_TITLE's virtual drives"
 +#fi
  
 -) &
