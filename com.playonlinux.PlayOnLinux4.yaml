@@ -106,6 +106,17 @@ modules:
 
   - xterm.yaml
 
+  - name: xrdb
+    buildsystem: autotools
+    sources:
+      - type: archive
+        url: https://xorg.freedesktop.org/releases/individual/app/xrdb-1.2.1.tar.gz
+        sha256: e674f5fb081a023e54878c0aac728dc30feb821207c989cff17a60f0c4a80ced
+        x-checker-data:
+          type: anitya
+          project-id: 14956
+          url-template: https://xorg.freedesktop.org/releases/individual/app/xrdb-$version.tar.gz
+
   - scrot.yaml
 
   - name: fake-sudo
