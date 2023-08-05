@@ -15,6 +15,7 @@ finish-args:
   - --share=network
   - --allow=multiarch
   - --filesystem=host:rw
+  - --env=__GLX_VENDOR_LIBRARY_NAME=mesa
 
 cleanup:
   - /share/pkgconfig
@@ -116,6 +117,8 @@ modules:
           type: anitya
           project-id: 14956
           url-template: https://xorg.freedesktop.org/releases/individual/app/xrdb-$version.tar.gz
+
+  - mesa-demos.yaml
 
   - scrot.yaml
 
