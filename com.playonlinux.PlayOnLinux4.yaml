@@ -14,7 +14,12 @@ finish-args:
   - --share=ipc
   - --share=network
   - --allow=multiarch
-  - --filesystem=host:rw
+  - --filesystem=home
+  - --filesystem=/media
+  - --filesystem=/mnt
+  - --filesystem=/run/media
+  - --filesystem=/var/run/media
+  - --filesystem=/var/mnt
   - --env=__GLX_VENDOR_LIBRARY_NAME=mesa
 
 cleanup:
