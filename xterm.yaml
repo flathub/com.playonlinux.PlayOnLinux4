@@ -36,8 +36,8 @@ modules:
     buildsystem: autotools
     sources:
       - type: archive
-        url: https://invisible-island.net/archives/ncurses/current/ncurses-6.4-20230902.tgz
-        sha256: 37cf9883fe4398a50730cf7c9257255c6511c890ed828b8ae2cc898abd0567a5
+        url: https://invisible-island.net/archives/ncurses/current/ncurses-6.4-20230909.tgz
+        sha256: f859a4646974231a099a9339bbd66146dd4746a0dcbb802913c73335f8c750bb
         x-checker-data:
           type: anitya
           project-id: 2057
