@@ -34,6 +34,19 @@ inherit-extensions:
   - org.winehq.Wine.mono
 
 modules:
+  - name: open-bias
+    buildsystem: cmake-ninja
+    sources:
+      - type: archive
+        archive-type: tar-gzip
+        url: https://api.github.com/repos/OpenMathLib/OpenBLAS/tarball/v0.3.24
+        sha256: 7a35ab23cf3d0548876ada8726724eed92cc7982a79f5d1c61ebeb8d4e00f0eb
+        x-checker-data:
+          type: json
+          url: https://api.github.com/repos/OpenMathLib/OpenBLAS/releases/latest
+          version-query: .tag_name
+          url-query: .tarball_url
+
   - python3-modules.yaml
 
   - name: netcat
