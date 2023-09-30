@@ -34,6 +34,19 @@ inherit-extensions:
   - org.winehq.Wine.mono
 
 modules:
+  - name: open-bias
+    buildsystem: cmake-ninja
+    sources:
+      - type: archive
+        archive-type: tar-gzip
+        url: https://api.github.com/repos/OpenMathLib/OpenBLAS/tarball/v0.3.24
+        sha256: 7a35ab23cf3d0548876ada8726724eed92cc7982a79f5d1c61ebeb8d4e00f0eb
+        x-checker-data:
+          type: json
+          url: https://api.github.com/repos/OpenMathLib/OpenBLAS/releases/latest
+          version-query: .tag_name
+          url-query: .tarball_url
+
   - python3-modules.yaml
 
   - name: netcat
@@ -57,8 +70,8 @@ modules:
     buildsystem: autotools
     sources:
       - type: archive
-        url: https://imagemagick.org/archive/releases/ImageMagick-7.1.1-15.tar.gz
-        sha256: b20348195d5c82ec35e0edb05488c456fc5efc1da585abf6511a62caa787f52a
+        url: https://imagemagick.org/archive/releases/ImageMagick-7.1.1-18.tar.gz
+        sha256: 82c37c8d0d194af71f590733a7eae9350527f5a069f0744fcf521f707d1bad58
         x-checker-data:
           type: anitya
           project-id: 1372

@@ -1,7 +1,30 @@
-# Generated with flatpak-pip-generator --yaml --checker-data --cleanup scripts wxPython natsort
+# Generated with flatpak-pip-generator --yaml --checker-data --cleanup scripts pyproject-metadata wxPython natsort
 build-commands: []
 buildsystem: simple
 modules:
+  - name: python3-pyproject-metadata
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "pyproject-metadata" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/ab/c3/57f0601a2d4fe15de7a553c00adbc901425661bf048f2a22dfc500caf121/packaging-23.1-py3-none-any.whl
+        sha256: 994793af429502c4ea2ebf6bf664629d07c1a9fe974af92966e4b8d2df7edc61
+        x-checker-data:
+          name: packaging
+          packagetype: bdist_wheel
+          type: pypi
+      - type: file
+        url: https://files.pythonhosted.org/packages/c4/cb/4678dfd70cd2f2d8969e571cdc1bb1e9293c698f8d1cf428fadcf48d6e9f/pyproject_metadata-0.7.1-py3-none-any.whl
+        sha256: 28691fbb36266a819ec56c9fa1ecaf36f879d6944dfde5411e87fc4ff793aa60
+        x-checker-data:
+          name: pyproject_metadata
+          packagetype: bdist_wheel
+          type: pypi
+    cleanup:
+      - /bin
+      - /share/man/man1
   - name: python3-wxPython
     buildsystem: simple
     build-commands:
@@ -15,8 +38,8 @@ modules:
           name: Pillow
           type: pypi
       - type: file
-        url: https://files.pythonhosted.org/packages/a0/41/8f53eff8e969dd8576ddfb45e7ed315407d27c7518ae49418be8ed532b07/numpy-1.25.2.tar.gz
-        sha256: fd608e19c8d7c55021dffd43bfe5492fab8cc105cc8986f813f8c3c048b38760
+        url: https://files.pythonhosted.org/packages/55/b3/b13bce39ba82b7398c06d10446f5ffd5c07db39b09bd37370dc720c7951c/numpy-1.26.0.tar.gz
+        sha256: f93fc78fe8bf15afe2b8d6b6499f1c73953169fad1e9a8dd086cdff3190e7fdf
         x-checker-data:
           name: numpy
           type: pypi
