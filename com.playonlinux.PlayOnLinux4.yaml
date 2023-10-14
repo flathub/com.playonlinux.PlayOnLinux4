@@ -93,8 +93,8 @@ modules:
     sources:
       - type: archive
         archive-type: tar-gzip
-        url: https://api.github.com/repos/kkos/oniguruma/tarball/v6.9.8
-        sha256: 1890b8c3150b65a6d761a72e3212a98d6b9c119a469c1c93099234bd3d6c5a0e
+        url: https://api.github.com/repos/kkos/oniguruma/tarball/v6.9.9
+        sha256: bf04711f13b8f37131cf2ab95b3ab8e6cd52e39a129e992bbfee5b4380bb25b1
         x-checker-data:
           type: json
           url: https://api.github.com/repos/kkos/oniguruma/releases/latest
