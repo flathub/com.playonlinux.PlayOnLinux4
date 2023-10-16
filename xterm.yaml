@@ -2,8 +2,8 @@ name: xterm
 buildsystem: autotools
 sources:
   - type: archive
-    url: https://invisible-mirror.net/archives/xterm/xterm-386.tgz
-    sha256: cbabf953c79a491949f7a840dc3a1d187cb0faa47cb5ce786c1afe0d440fc7c4
+    url: https://invisible-mirror.net/archives/xterm/xterm-387.tgz
+    sha256: 81dd59cc2ecef1e849ed21722e37a24756e02b54ec19d157cb545b273813f4b8
     x-checker-data:
       type: anitya
       project-id: 5272
@@ -36,8 +36,8 @@ modules:
     buildsystem: autotools
     sources:
       - type: archive
-        url: https://invisible-island.net/archives/ncurses/current/ncurses-6.4-20231007.tgz
-        sha256: dbba2f95b29bc2336e07744ee752ede30a0e69dfb0ce59a36b55eb28554a5597
+        url: https://invisible-island.net/archives/ncurses/current/ncurses-6.4-20231014.tgz
+        sha256: 076f4ed8a23a4d1d723dd172e3b99f070bee817a4bc20bcc5b79cf37f76a2005
         x-checker-data:
           type: anitya
           project-id: 2057
