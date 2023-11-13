@@ -39,8 +39,8 @@ modules:
     sources:
       - type: archive
         archive-type: tar-gzip
-        url: https://api.github.com/repos/OpenMathLib/OpenBLAS/tarball/v0.3.24
-        sha256: 7a35ab23cf3d0548876ada8726724eed92cc7982a79f5d1c61ebeb8d4e00f0eb
+        url: https://api.github.com/repos/OpenMathLib/OpenBLAS/tarball/v0.3.25
+        sha256: 0b29fbd2a9742c5afe399a0fe1bb1ecae2d42b4a51cb5f198bb82628d5202b10
         x-checker-data:
           type: json
           url: https://api.github.com/repos/OpenMathLib/OpenBLAS/releases/latest
