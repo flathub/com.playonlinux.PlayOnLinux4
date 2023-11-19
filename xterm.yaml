@@ -31,14 +31,3 @@ modules:
           type: anitya
           project-id: 1766
           url-template: https://xorg.freedesktop.org/releases/individual/lib/libXaw-$version.tar.gz
-
-  - name: ncurses
-    buildsystem: autotools
-    sources:
-      - type: archive
-        url: https://invisible-island.net/archives/ncurses/current/ncurses-6.4-20231111.tgz
-        sha256: 5f24eb98e4bba6c871d4b2152198243714e1e8fa86cf01b592a77c6e435ee364
-        x-checker-data:
-          type: anitya
-          project-id: 2057
-          url-template: https://invisible-island.net/archives/ncurses/current/ncurses-$version.tgz
