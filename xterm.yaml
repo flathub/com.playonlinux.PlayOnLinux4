@@ -1,5 +1,7 @@
 name: xterm
 buildsystem: autotools
+config-opts:
+  - --disable-full-tgetent
 sources:
   - type: archive
     url: https://invisible-mirror.net/archives/xterm/xterm-388.tgz
