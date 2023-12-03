@@ -10,17 +10,6 @@ sources:
       url-template: https://gitlab.freedesktop.org/mesa/demos/-/archive/mesa-demos-$version/demos-mesa-demos-$version.tar.gz
 
 modules:
-  - name: libdecor
-    buildsystem: meson
-    sources:
-      - type: archive
-        url: https://gitlab.freedesktop.org/libdecor/libdecor/-/archive/0.2.1/libdecor-0.2.1.tar.gz
-        sha256: ebbb60cb43fefd34d0d4460f0de226fa28ba5b7566f09e0e170481316256e133
-        x-checker-data:
-          type: anitya
-          project-id: 312806
-          url-template: https://gitlab.freedesktop.org/libdecor/libdecor/-/archive/$version/libdecor-$version.tar.gz
-
   - name: glu
     buildsystem: meson
     sources:
