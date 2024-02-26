@@ -1,7 +1,6 @@
-diff -ruN a/etc/PlayOnLinux.appdata.xml b/etc/PlayOnLinux.appdata.xml
 --- a/etc/PlayOnLinux.appdata.xml	2020-05-17 16:05:33.000000000 +0200
-+++ b/etc/PlayOnLinux.appdata.xml	2023-07-26 10:27:44.228333379 +0200
-@@ -1,11 +1,12 @@
++++ b/etc/PlayOnLinux.appdata.xml	2024-02-26 16:16:29.491055903 +0100
+@@ -1,11 +1,15 @@
  <?xml version="1.0" encoding="UTF-8"?>
  <!-- Copyright 2016 Jiri Konecny <dragonlichcz@gmail.com> -->
  <component type="desktop">
@@ -12,11 +11,22 @@ diff -ruN a/etc/PlayOnLinux.appdata.xml b/etc/PlayOnLinux.appdata.xml
 -  <name>PlayOnLinux</name>
 +  <name>PlayOnLinux 4</name>
    <summary>Graphical front-end for Wine</summary>
++  <developer id="com.playonlinux">
++    <name>The PlayOnLinux Authors</name>
++  </developer>
 +  <launchable type="desktop-id">com.playonlinux.PlayOnLinux4.desktop</launchable>
    <description>
      <p>
      PlayOnLinux will allow you to run your favorite Windows games and
-@@ -47,4 +48,19 @@
+@@ -38,6 +42,7 @@
+   <url type="donation">https://www.playonlinux.com/en/donate.html</url>
+   <url type="help">http://wiki.playonlinux.com/index.php/Main_Page</url>
+   <url type="translate">http://wiki.playonlinux.com/index.php/Scripting_-_Chapter_10:_Script_Translation</url>
++  <url type="vcs-browser">https://github.com/PlayOnLinux/POL-POM-4</url>
+ 
+   <keywords>
+     <keyword>wine</keyword>
+@@ -47,4 +52,19 @@
    </keywords>
  
    <update_contact>dragonlichcz_at_gmail.com</update_contact>
