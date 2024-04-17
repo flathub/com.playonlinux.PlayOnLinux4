@@ -9,8 +9,8 @@ modules:
         --prefix=${FLATPAK_DEST} "meson-python" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/1f/60/b10b11ab470a690d5777310d6cfd1c9bdbbb0a1313a78c34a1e82e0b9d27/meson_python-0.15.0-py3-none-any.whl
-        sha256: 3ae38253ff02b2e947a05e362a2eaf5a9a09d133c5666b4123399ee5fbf2e591
+        url: https://files.pythonhosted.org/packages/91/c0/104cb6244c83fe6bc3886f144cc433db0c0c78efac5dc00e409a5a08c87d/meson_python-0.16.0-py3-none-any.whl
+        sha256: 842dc9f5dc29e55fc769ff1b6fe328412fe6c870220fc321060a1d2d395e69e8
         x-checker-data:
           name: meson_python
           packagetype: bdist_wheel
