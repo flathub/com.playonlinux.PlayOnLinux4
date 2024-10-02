@@ -1,0 +1,21 @@
+From 79c513fa8a1938e55be0a239121176f1415049fc Mon Sep 17 00:00:00 2001
+From: Robert Scheck <robert-scheck@users.noreply.github.com>
+Date: Sun, 26 May 2024 20:32:53 +0200
+Subject: [PATCH] Remove unused import of deprecated Python asyncore.dispatcher
+
+---
+ python/options.py | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/python/options.py b/python/options.py
+index f40f26a70..e18ddb32b 100755
+--- a/python/options.py
++++ b/python/options.py
+@@ -18,7 +18,6 @@
+ # with this program; if not, write to the Free Software Foundation, Inc.,
+ # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ 
+-from asyncore import dispatcher
+ import os, subprocess, getopt, sys, urllib.request, signal, socket
+ import wx, time, re
+ import webbrowser, shutil
