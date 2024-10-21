@@ -9,8 +9,8 @@ modules:
         --prefix=${FLATPAK_DEST} "meson-python" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/91/c0/104cb6244c83fe6bc3886f144cc433db0c0c78efac5dc00e409a5a08c87d/meson_python-0.16.0-py3-none-any.whl
-        sha256: 842dc9f5dc29e55fc769ff1b6fe328412fe6c870220fc321060a1d2d395e69e8
+        url: https://files.pythonhosted.org/packages/10/c3/b643a9918b462ab4cf2775179a787250cc4140d71e6ea7193576f3f84efa/meson_python-0.17.0-py3-none-any.whl
+        sha256: c889b63a1378c3ddc4b09c852c8a37340c787eecf1f6bc21a951f1175d669d2a
         x-checker-data:
           name: meson_python
           packagetype: bdist_wheel
@@ -25,8 +25,8 @@ modules:
           type: pypi
       - &id002
         type: file
-        url: https://files.pythonhosted.org/packages/aa/5f/bb5970d3d04173b46c9037109f7f05fc8904ff5be073ee49bb6ff00301bc/pyproject_metadata-0.8.0-py3-none-any.whl
-        sha256: ad858d448e1d3a1fb408ac5bac9ea7743e7a8bbb472f2693aaa334d2db42f526
+        url: https://files.pythonhosted.org/packages/22/81/42aaafbff27ca340eef777a4e3e8a509941e75fc0eeb9da2be5ee4159041/pyproject_metadata-0.8.1-py3-none-any.whl
+        sha256: adf593fa478b787c90cc77fcea4114f19a3a1335532bdcba2851be9459a6c39e
         x-checker-data:
           name: pyproject_metadata
           packagetype: bdist_wheel
@@ -52,14 +52,14 @@ modules:
         --prefix=${FLATPAK_DEST} "wxPython" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/59/5f/9003bb3e632f2b58f5e3a3378902dcc73c5518070736c6740fe52454e8e1/numpy-2.1.1.tar.gz
-        sha256: d0cf7d55b1051387807405b3898efafa862997b4cba8aa5dbe657be794afeafd
+        url: https://files.pythonhosted.org/packages/4b/d1/8a730ea07f4a37d94f9172f4ce1d81064b7a64766b460378be278952de75/numpy-2.1.2.tar.gz
+        sha256: 13532a088217fa624c99b843eeb54640de23b3414b14aa66d023805eb731066c
         x-checker-data:
           name: numpy
           type: pypi
       - type: file
-        url: https://files.pythonhosted.org/packages/cd/74/ad3d526f3bf7b6d3f408b73fde271ec69dfac8b81341a318ce825f2b3812/pillow-10.4.0.tar.gz
-        sha256: 166c1cd4d24309b30d61f79f4a9114b7b2313d7450912277855ff5dfd7cd4a06
+        url: https://files.pythonhosted.org/packages/a5/26/0d95c04c868f6bdb0c447e3ee2de5564411845e36a858cfd63766bc7b563/pillow-11.0.0.tar.gz
+        sha256: 72bacbaf24ac003fea9bff9837d1eedb6088758d41e100c1552930151f677739
         x-checker-data:
           name: pillow
           type: pypi
