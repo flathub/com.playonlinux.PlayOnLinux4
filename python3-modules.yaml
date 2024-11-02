@@ -52,8 +52,8 @@ modules:
         --prefix=${FLATPAK_DEST} "wxPython" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/4b/d1/8a730ea07f4a37d94f9172f4ce1d81064b7a64766b460378be278952de75/numpy-2.1.2.tar.gz
-        sha256: 13532a088217fa624c99b843eeb54640de23b3414b14aa66d023805eb731066c
+        url: https://files.pythonhosted.org/packages/25/ca/1166b75c21abd1da445b97bf1fa2f14f423c6cfb4fc7c4ef31dccf9f6a94/numpy-2.1.3.tar.gz
+        sha256: aa08e04e08aaf974d4458def539dece0d28146d866a39da5639596f4921fd761
         x-checker-data:
           name: numpy
           type: pypi
