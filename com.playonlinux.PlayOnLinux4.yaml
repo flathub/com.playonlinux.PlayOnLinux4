@@ -29,7 +29,6 @@ inherit-extensions:
   - org.freedesktop.Platform.ffmpeg-full
   - org.freedesktop.Platform.GL32
   - org.freedesktop.Platform.VAAPI.Intel.i386
-  - org.winehq.Wine.DLLs
   - org.winehq.Wine.gecko
   - org.winehq.Wine.mono
 
