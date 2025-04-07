@@ -3,8 +3,8 @@ buildsystem: autotools
 sources:
   - type: archive
     archive-type: tar-gzip
-    url: https://api.github.com/repos/resurrecting-open-source-projects/scrot/tarball/1.11.1
-    sha256: 3d7d3bb6fa72a5b6366221333be53237698e27c26f6150f102606f6593c68029
+    url: https://api.github.com/repos/resurrecting-open-source-projects/scrot/tarball/1.12.1
+    sha256: b4087954fa19f2adf16e90f6d3ba6c20ae41000591501933b82a2ce7d2c23cfa
     x-checker-data:
       type: json
       url: https://api.github.com/repos/resurrecting-open-source-projects/scrot/releases/latest
@@ -15,8 +15,8 @@ modules:
     buildsystem: autotools
     sources:
       - type: archive
-        url: https://downloads.sourceforge.net/project/enlightenment/imlib2-src/1.12.4/imlib2-1.12.4.tar.gz
-        sha256: 3dd6538dd012ef140e051b9579633a7c4b073e088326d65df4d3b2d6099193b9
+        url: https://downloads.sourceforge.net/project/enlightenment/imlib2-src/1.12.5/imlib2-1.12.5.tar.gz
+        sha256: 097d40aee4cf4a349187615b796b37db1652fcc84bb0e8d5c0b380ab651d9095
         x-checker-data:
           type: anitya
           project-id: 21676
