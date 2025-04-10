@@ -46,6 +46,7 @@ modules:
           version-query: .tag_name
           url-query: .tarball_url
 
+  - requests.yaml
   - python3-modules.yaml
 
   - name: netcat
