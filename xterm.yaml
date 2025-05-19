@@ -4,8 +4,8 @@ config-opts:
   - --disable-full-tgetent
 sources:
   - type: archive
-    url: https://invisible-mirror.net/archives/xterm/xterm-398.tgz
-    sha256: f679bd45f97063f10a880ecf7fc1611a9a03e8c8b98f063e99e0a079e87ee968
+    url: https://invisible-mirror.net/archives/xterm/xterm-399.tgz
+    sha256: 9db34ad0f53ddb1223d70b247c8391e52f3e4b166d6ad85426a4c47813d1b1e3
     x-checker-data:
       type: anitya
       project-id: 5272
