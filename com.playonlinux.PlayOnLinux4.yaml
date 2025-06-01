@@ -106,8 +106,8 @@ modules:
     sources:
       - type: archive
         archive-type: tar-gzip
-        url: https://api.github.com/repos/jqlang/jq/tarball/jq-1.7.1
-        sha256: 3b0b7adbd7a7aa082716ba6dbeb23e11bf29fe8de58ed648402b86a30e79f664
+        url: https://api.github.com/repos/jqlang/jq/tarball/jq-1.8.0
+        sha256: 2d856d61ef38035c86e3809a31935e6a8c6852e491d7c26407155034a2bf2079
         x-checker-data:
           type: json
           url: https://api.github.com/repos/jqlang/jq/releases/latest
