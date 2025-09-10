@@ -79,6 +79,8 @@ modules:
 
   - name: icoutils
     buildsystem: autotools
+    build-options:
+      cflags: -std=gnu17
     sources:
       - type: archive
         url: http://download.savannah.gnu.org/releases/icoutils/icoutils-0.32.3.tar.bz2
