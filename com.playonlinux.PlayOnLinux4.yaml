@@ -1,9 +1,9 @@
 id: com.playonlinux.PlayOnLinux4
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 base: org.winehq.Wine
-base-version: stable-24.08
+base-version: stable-25.08
 command: playonlinux
 rename-desktop-file: PlayOnLinux.desktop
 rename-appdata-file: PlayOnLinux.appdata.xml
