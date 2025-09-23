@@ -177,3 +177,7 @@ modules:
         path: patches/appdata.patch
       - type: patch
         path: patches/remove-asyncore-import.patch
+      - type: patch
+        path: patches/pipes-replace.patch
+      - type: patch
+        path: patches/fix-escape-sequence.patch
