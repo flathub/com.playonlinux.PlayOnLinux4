@@ -1,9 +1,9 @@
 id: com.playonlinux.PlayOnLinux4
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 base: org.winehq.Wine
-base-version: stable-24.08
+base-version: stable-25.08
 command: playonlinux
 rename-desktop-file: PlayOnLinux.desktop
 rename-appdata-file: PlayOnLinux.appdata.xml
@@ -25,8 +25,7 @@ cleanup:
 
 inherit-extensions:
   - org.freedesktop.Platform.Compat.i386
-  - org.freedesktop.Platform.ffmpeg_full.i386
-  - org.freedesktop.Platform.ffmpeg-full
+  - org.freedesktop.Platform.codecs_extra.i386
   - org.freedesktop.Platform.GL32
   - org.freedesktop.Platform.VAAPI.Intel.i386
   - org.winehq.Wine.gecko
@@ -79,6 +78,8 @@ modules:
 
   - name: icoutils
     buildsystem: autotools
+    build-options:
+      cflags: -std=gnu17
     sources:
       - type: archive
         url: http://download.savannah.gnu.org/releases/icoutils/icoutils-0.32.3.tar.bz2
@@ -176,3 +177,7 @@ modules:
         path: patches/appdata.patch
       - type: patch
         path: patches/remove-asyncore-import.patch
+      - type: patch
+        path: patches/pipes-replace.patch
+      - type: patch
+        path: patches/fix-escape-sequence.patch

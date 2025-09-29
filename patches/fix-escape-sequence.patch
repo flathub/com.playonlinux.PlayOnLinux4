@@ -1,0 +1,24 @@
+From f01bd5feffca19b0d2fb6f059d367cc90ea3a34d Mon Sep 17 00:00:00 2001
+From: brianbadl <mohammadbrianabdillah@gmail.com>
+Date: Sat, 28 Dec 2024 07:49:30 +0700
+Subject: [PATCH] Fix Syntax: invalid escape sequence
+
+---
+ python/configurewindow/ConfigureWindowNotebook.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/python/configurewindow/ConfigureWindowNotebook.py b/python/configurewindow/ConfigureWindowNotebook.py
+index 296443e66..505b47693 100644
+--- a/python/configurewindow/ConfigureWindowNotebook.py
++++ b/python/configurewindow/ConfigureWindowNotebook.py
+@@ -461,8 +461,8 @@ def misc_button(self, event):
+             self.FileDialog = wx.FileDialog(self)
+             self.FileDialog.SetDirectory("~")
+             self.supported_files = "All|*.exe;*.EXE;*.msi;*.MSI\
+-            \|Windows executable (*.exe)|*.exe;*.EXE\
+-            \|Windows install file (*.msi)|*.msi;*MSI"
++            |Windows executable (*.exe)|*.exe;*.EXE\
++            |Windows install file (*.msi)|*.msi;*MSI"
+             self.FileDialog.SetWildcard(self.supported_files)
+             self.FileDialog.ShowModal()
+             if (self.FileDialog.GetPath() != ""):
