@@ -69,8 +69,8 @@ modules:
     buildsystem: autotools
     sources:
       - type: archive
-        url: https://imagemagick.org/archive/releases/ImageMagick-7.1.2-5.tar.gz
-        sha256: 06404f62be1161b451a5f2e878bf940dfe1a510f0320d73588b5bfa5b5ccf4e3
+        url: https://imagemagick.org/archive/releases/ImageMagick-7.1.2-7.tar.gz
+        sha256: dc9efd3a962f65d6b7d16d89c2990d1f88a6e4fbd61598b860309e5bdcb50e62
         x-checker-data:
           type: anitya
           project-id: 1372
