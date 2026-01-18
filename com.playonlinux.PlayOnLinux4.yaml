@@ -37,8 +37,8 @@ modules:
     sources:
       - type: archive
         archive-type: tar-gzip
-        url: https://api.github.com/repos/OpenMathLib/OpenBLAS/tarball/v0.3.30
-        sha256: d0d4a476c4baedadbb64c2358d2be441f4f2f11cc7a8c7f341c775e80d1a91a5
+        url: https://api.github.com/repos/OpenMathLib/OpenBLAS/tarball/v0.3.31
+        sha256: 22add319715a3c097985b00fd42e3ae5833ecd8eb8fd3d013341f5cfaf2fb095
         x-checker-data:
           type: json
           url: https://api.github.com/repos/OpenMathLib/OpenBLAS/releases/latest
@@ -69,8 +69,8 @@ modules:
     buildsystem: autotools
     sources:
       - type: archive
-        url: https://imagemagick.org/archive/releases/ImageMagick-7.1.2-7.tar.gz
-        sha256: dc9efd3a962f65d6b7d16d89c2990d1f88a6e4fbd61598b860309e5bdcb50e62
+        url: https://imagemagick.org/archive/releases/ImageMagick-7.1.2-12.tar.gz
+        sha256: 2f3c8077ac537c5aceec02db9c80fa220766a82a7a78ba327d85a764029339d7
         x-checker-data:
           type: anitya
           project-id: 1372
