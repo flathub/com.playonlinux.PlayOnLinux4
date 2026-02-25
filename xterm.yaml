@@ -4,8 +4,8 @@ config-opts:
   - --disable-full-tgetent
 sources:
   - type: archive
-    url: https://invisible-mirror.net/archives/xterm/xterm-406.tgz
-    sha256: 066eb2d66430897fe1dadd271554ccdae33d77c512126a758fc4de37b1148799
+    url: https://invisible-mirror.net/archives/xterm/xterm-407.tgz
+    sha256: 2136eba530068a1b7565abbf17823274f5cefb7fe3618355cbc89dc55c8b7b6a
     x-checker-data:
       type: anitya
       project-id: 5272
@@ -16,8 +16,8 @@ modules:
     buildsystem: autotools
     sources:
       - type: archive
-        url: https://xorg.freedesktop.org/releases/individual/lib/libXmu-1.3.0.tar.gz
-        sha256: 195125c08d23bfdc84e6f6a9f66b19d5cb38cd1564a704accaa3bf6131660f99
+        url: https://xorg.freedesktop.org/releases/individual/lib/libXmu-1.3.1.tar.gz
+        sha256: 5c8f44e26ccc9b14188599524e67ce788a205b38e297834babdeb12090be835b
         x-checker-data:
           type: anitya
           project-id: 1785
