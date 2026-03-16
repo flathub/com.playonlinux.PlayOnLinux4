@@ -3,8 +3,8 @@ buildsystem: autotools
 sources:
   - type: archive
     archive-type: tar-gzip
-    url: https://api.github.com/repos/resurrecting-open-source-projects/scrot/tarball/1.12.1
-    sha256: b4087954fa19f2adf16e90f6d3ba6c20ae41000591501933b82a2ce7d2c23cfa
+    url: https://api.github.com/repos/resurrecting-open-source-projects/scrot/tarball/2.0.0
+    sha256: 1cedbb9a6fb8a2aec3a7f35764db74acc1ea477e22e3cb5b8070ca278e34c83b
     x-checker-data:
       type: json
       url: https://api.github.com/repos/resurrecting-open-source-projects/scrot/releases/latest
