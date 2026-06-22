@@ -9,8 +9,8 @@ modules:
         --prefix=${FLATPAK_DEST} "meson-python" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/16/7f/d1b0c65b267a1463d752b324f11d3470e30889daefc4b9ec83029bfa30b5/meson_python-0.19.0-py3-none-any.whl
-        sha256: 67b5906c37404396d23c195e12c8825506074460d4a2e7083266b845d14f0298
+        url: https://files.pythonhosted.org/packages/90/ad/77f9483e180cabab2772ac222aedd3dfab858e60d992f40414a3f08e7494/meson_python-0.20.0-py3-none-any.whl
+        sha256: 6a744cf0c09e76ecbdc58cfa374b48c8902dac1b74479628238634efbf36aec9
         x-checker-data:
           name: meson_python
           packagetype: bdist_wheel
@@ -52,8 +52,8 @@ modules:
         --prefix=${FLATPAK_DEST} "wxPython" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/d7/9f/b8cef5bffa569759033adda9481211426f12f53299629b410340795c2514/numpy-2.4.4.tar.gz
-        sha256: 2d390634c5182175533585cc89f3608a4682ccb173cc9bb940b2881c8d6f8fa0
+        url: https://files.pythonhosted.org/packages/e7/05/3d27272d30698dc0ecb7fdfaa41ad70303b444f81722bb99bce1d818638a/numpy-2.5.0.tar.gz
+        sha256: 5a129578019311b6e56bdd714250f19b518f7dceeeb8d1af5490f4942d3f891c
         x-checker-data:
           name: numpy
           type: pypi
