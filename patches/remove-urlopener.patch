@@ -1,0 +1,25 @@
+From cac8701c806ae3f8f94f8c383e05996efaa53d58 Mon Sep 17 00:00:00 2001
+From: Borislav Sabev <BorislavSabev@users.noreply.github.com>
+Date: Mon, 5 Jan 2026 15:03:49 +0200
+Subject: [PATCH] Update POL_SetupFrame.py - Fix syntax warning with Python >=
+ 3.10
+
+---
+ python/setupwindow/POL_SetupFrame.py | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/python/setupwindow/POL_SetupFrame.py b/python/setupwindow/POL_SetupFrame.py
+index 33d73d38a..5a2feaf11 100755
+--- a/python/setupwindow/POL_SetupFrame.py
++++ b/python/setupwindow/POL_SetupFrame.py
+@@ -33,7 +33,9 @@
+ import lib.playonlinux as playonlinux
+ 
+ lib.lng.Lang()
+-urllib.request.URLopener.version = Variables.userAgent  # Arg ...
++opener = urllib.request.build_opener()
++opener.addheaders = [('User-Agent', Variables.userAgent)]
++urllib.request._urlopener = opener
+ 
+ from ui.PlayOnLinuxWindow import PlayOnLinuxWindow
+ from setupwindow.Downloader import Downloader
