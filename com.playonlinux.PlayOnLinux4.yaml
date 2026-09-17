@@ -1,12 +1,15 @@
 id: com.playonlinux.PlayOnLinux4
 runtime: org.freedesktop.Platform
-runtime-version: '25.08'
+runtime-version: '26.08'
 sdk: org.freedesktop.Sdk
 base: org.winehq.Wine
-base-version: stable-25.08
+base-version: stable-26.08
 command: playonlinux
 rename-desktop-file: PlayOnLinux.desktop
 rename-appdata-file: PlayOnLinux.appdata.xml
+x-gl-version: &gl-version '1.4'
+x-gl-versions: &gl-versions 26.08;26.08-extra;1.4
+x-gl-merge-dirs: &gl-merge-dirs vulkan/icd.d;glvnd/egl_vendor.d;egl/egl_external_platform.d;OpenCL/vendors;lib/dri;lib/d3d;lib/gbm;vulkan/explicit_layer.d;vulkan/implicit_layer.d;vdpau
 finish-args:
   - --socket=x11
   - --device=all
@@ -16,6 +19,7 @@ finish-args:
   - --allow=multiarch
   - --filesystem=host:rw
   - --env=__GLX_VENDOR_LIBRARY_NAME=mesa
+  - --env=GST_PLUGIN_SYSTEM_PATH=/app/lib/gstreamer-1.0:/app/lib32/gstreamer-1.0:/usr/lib/extensions/gstreamer-1.0:/usr/lib/x86_64-linux-gnu/codecs-extra/lib/gstreamer-1.0:/usr/lib/i386-linux-gnu/codecs-extra/lib/gstreamer-1.0:/usr/lib/x86_64-linux-gnu/gstreamer-1.0:/usr/lib/i386-linux-gnu/gstreamer-1.0
 
 cleanup:
   - /share/pkgconfig
@@ -24,14 +28,71 @@ cleanup:
   - /include
 
 inherit-extensions:
-  - org.freedesktop.Platform.Compat.i386
-  - org.freedesktop.Platform.codecs_extra.i386
-  - org.freedesktop.Platform.GL32
-  - org.freedesktop.Platform.VAAPI.Intel.i386
   - org.winehq.Wine.gecko
   - org.winehq.Wine.mono
 
+add-extensions:
+  org.freedesktop.Platform.GL32:
+    directory: lib/i386-linux-gnu/GL
+    version: *gl-version
+    versions: *gl-versions
+    subdirectories: true
+    no-autodownload: true
+    autodelete: false
+    add-ld-path: lib
+    merge-dirs: *gl-merge-dirs
+    download-if: active-gl-driver
+    enable-if: active-gl-driver
+    autoprune-unless: active-gl-driver
+
+  org.freedesktop.Platform.GL32.Debug:
+    directory: lib/debug/lib/i386-linux-gnu/GL
+    version: *gl-version
+    versions: *gl-versions
+    subdirectories: true
+    no-autodownload: true
+    merge-dirs: *gl-merge-dirs
+    enable-if: active-gl-driver
+    autoprune-unless: active-gl-driver
+
+  org.freedesktop.Platform.VAAPI.Intel.i386:
+    directory: lib/i386-linux-gnu/dri/intel-vaapi-driver
+    version: '26.08'
+    versions: '26.08'
+    autodelete: false
+    no-autodownload: true
+    add-ld-path: lib
+    download-if: have-intel-gpu
+    autoprune-unless: have-intel-gpu
+
+  org.freedesktop.Platform.VAAPI.nvidia.i386:
+    directory: i386/nvidia-vaapi-driver
+    version: '26.08'
+    versions: '26.08'
+    autodelete: false
+    no-autodownload: true
+    add-ld-path: lib
+    download-if: have-kernel-module-nvidia
+    autoprune-unless: have-kernel-module-nvidia
+
 modules:
+  - name: i386-setup
+    buildsystem: simple
+    build-commands:
+      - install -Dm644 ld.so.conf -t $FLATPAK_DEST/etc
+      - mkdir -p ${FLATPAK_DEST}/lib/i386-linux-gnu
+      - mkdir -p ${FLATPAK_DEST}/lib/debug/lib/i386-linux-gnu
+      - mkdir -p ${FLATPAK_DEST}/lib/i386-linux-gnu/GL
+      - mkdir -p ${FLATPAK_DEST}/lib/debug/lib/i386-linux-gnu/GL
+      - mkdir -p ${FLATPAK_DEST}/lib/i386-linux-gnu/dri/intel-vaapi-driver
+      - mkdir -p ${FLATPAK_DEST}/i386/nvidia-vaapi-driver
+    sources:
+      - type: inline
+        dest-filename: ld.so.conf
+        contents: |
+          /app/lib32
+          /app/lib/i386-linux-gn
+
   - name: open-bias
     buildsystem: cmake-ninja
     sources:
@@ -69,12 +130,12 @@ modules:
     buildsystem: autotools
     sources:
       - type: archive
-        url: https://imagemagick.org/archive/releases/ImageMagick-7.1.2-21.tar.gz
-        sha256: caba3b047dc8238dee64893a4ca7e40c503a8f7ffb72a63d65da0b2a514751ef
+        url: https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-31/ImageMagick-7.1.2-31.7z
+        sha256: a050a1f6b632cf3a5b326fe6fb863790ce4d52d55fba9c6a7645b42599660e18
         x-checker-data:
           type: anitya
           project-id: 1372
-          url-template: https://imagemagick.org/archive/releases/ImageMagick-$version.tar.gz
+          url-template: https://github.com/ImageMagick/ImageMagick/releases/download/$version/ImageMagick-$version.7z
 
   - name: icoutils
     buildsystem: autotools
@@ -164,3 +225,5 @@ modules:
         path: patches/pipes-replace.patch
       - type: patch
         path: patches/fix-escape-sequence.patch
+      - type: patch
+        path: patches/remove-urlopener.patch
