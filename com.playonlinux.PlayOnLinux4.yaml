@@ -91,7 +91,7 @@ modules:
         dest-filename: ld.so.conf
         contents: |
           /app/lib32
-          /app/lib/i386-linux-gn
+          /app/lib/i386-linux-gnu
 
   - name: open-bias
     buildsystem: cmake-ninja
