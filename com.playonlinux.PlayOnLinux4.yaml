@@ -9,7 +9,8 @@ rename-desktop-file: PlayOnLinux.desktop
 rename-appdata-file: PlayOnLinux.appdata.xml
 x-gl-version: &gl-version '1.4'
 x-gl-versions: &gl-versions 26.08;26.08-extra;1.4
-x-gl-merge-dirs: &gl-merge-dirs vulkan/icd.d;glvnd/egl_vendor.d;egl/egl_external_platform.d;OpenCL/vendors;lib/dri;lib/d3d;lib/gbm;vulkan/explicit_layer.d;vulkan/implicit_layer.d;vdpau
+x-gl-merge-dirs: &gl-merge-dirs 
+  vulkan/icd.d;glvnd/egl_vendor.d;egl/egl_external_platform.d;OpenCL/vendors;lib/dri;lib/d3d;lib/gbm;vulkan/explicit_layer.d;vulkan/implicit_layer.d;vdpau
 finish-args:
   - --socket=x11
   - --device=all
@@ -121,7 +122,8 @@ modules:
         x-checker-data:
           type: anitya
           project-id: 21535
-          url-template: http://sourceforge.net/projects/netcat/files/netcat/$version/netcat-$version.tar.gz
+          url-template: 
+            http://sourceforge.net/projects/netcat/files/netcat/$version/netcat-$version.tar.gz
     cleanup:
       - /man
       - /info
@@ -130,12 +132,14 @@ modules:
     buildsystem: autotools
     sources:
       - type: archive
-        url: https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-34/ImageMagick-7.1.2-34.7z
-        sha256: a376053195cbab4618855e1a7d90f85f41b95ec2240a91e9c0fe5815d231960d
+        url: 
+          https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-35/ImageMagick-7.1.2-35.7z
+        sha256: 1d95f7d0ed11e91a3ee9e3042a8e248cb88c666dd9256ab14cc871b1f73138fd
         x-checker-data:
           type: anitya
           project-id: 1372
-          url-template: https://github.com/ImageMagick/ImageMagick/releases/download/$version/ImageMagick-$version.7z
+          url-template: 
+            https://github.com/ImageMagick/ImageMagick/releases/download/$version/ImageMagick-$version.7z
 
   - name: icoutils
     buildsystem: autotools
